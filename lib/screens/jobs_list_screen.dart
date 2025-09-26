@@ -153,4 +153,4 @@ class JobsListScreen extends StatelessWidget {
 // git add README.md
 // git commit -m "first commit"
 // git branch -M main
-// git remote add origin https://github.com/230103252Itachi/test_apphgyugbhbh
+// git remote add origin https://github.com/230103252Itachi/test_app
