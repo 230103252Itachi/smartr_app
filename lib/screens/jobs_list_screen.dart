@@ -11,52 +11,135 @@ class JobsListScreen extends StatelessWidget {
       salary: "\$40–60k/yearly",
       status: "Open",
       location: "Remote",
-      description: "Can you bring creative human-centered ideas to life ...",
+      description: "Bring creative, human-centered ideas to life.",
+      date: "03 March, 2022",
+      deadline: "03 June, 2022",
+      type: "Full-time",
+      responsibilities: [
+        "Assist in creating wireframes and prototypes",
+        "Support senior designers in user research",
+        "Collaborate with developers for design implementation",
+      ],
       category: "Designer",
     ),
     Job(
-      title: "Junior Product Designer",
-      company: "Canva",
-      salary: "\$40–60k/yearly",
+      title: "Android Developer",
+      company: "Google",
+      salary: "\$70–90k/yearly",
       status: "Applied",
-      location: "Remote",
-      description: "We believe in teamwork, fun, complex projects ...",
+      location: "Mountain View, CA",
+      description: "Develop high-quality Android apps with Kotlin and Java.",
+      date: "15 April, 2022",
+      deadline: "15 July, 2022",
+      type: "Full-time",
+      responsibilities: [
+        "Build and maintain Android applications",
+        "Write clean and efficient Kotlin/Java code",
+        "Work with UI/UX designers for smooth interfaces",
+      ],
       category: "Designer",
     ),
     Job(
-      title: "Middle Motion Designer",
-      company: "Canva",
-      salary: "\$40–60k/yearly",
-      status: "Expiring",
-      location: "Remote",
-      description: "We’re looking for a like-minded motion designer ...",
+      title: "Backend Engineer",
+      company: "Amazon",
+      salary: "\$90–120k/yearly",
+      status: "Open",
+      location: "Seattle, WA",
+      description: "Work on backend services powering millions of users.",
+      date: "20 May, 2022",
+      deadline: "20 August, 2022",
+      type: "Full-time",
+      responsibilities: [
+        "Develop scalable REST APIs",
+        "Optimize database queries",
+        "Ensure system security and reliability",
+      ],
       category: "Designer",
     ),
     Job(
-      title: "Junior Android developer",
-      company: "Kotlin, Java",
-      salary: "\$40–60k/yearly",
+      title: "iOS Developer",
+      company: "Apple",
+      salary: "\$80–100k/yearly",
+      status: "Expires Soon",
+      location: "Cupertino, CA",
+      description: "Develop next-gen iOS applications with Swift.",
+      date: "01 June, 2022",
+      deadline: "01 September, 2022",
+      type: "Full-time",
+      responsibilities: [
+        "Build iOS apps using Swift and SwiftUI",
+        "Integrate APIs and services",
+        "Fix bugs and optimize performance",
+      ],
+      category: "Designer",
+    ),
+    Job(
+      title: "Frontend Developer",
+      company: "Facebook (Meta)",
+      salary: "\$75–95k/yearly",
       status: "Open",
       location: "Remote",
-      description: "Can you bring creative human-centered ideas to life ...",
+      description: "Create fast and responsive web applications.",
+      date: "10 March, 2022",
+      deadline: "10 June, 2022",
+      type: "Full-time",
+      responsibilities: [
+        "Build UI with React.js",
+        "Ensure cross-browser compatibility",
+        "Work with designers and backend engineers",
+      ],
       category: "Android",
     ),
     Job(
-      title: "Middle Android developer",
-      company: "Kotlin, Java",
-      salary: "\$40–60k/yearly",
-      status: "Expiring",
-      location: "Remote",
-      description: "We believe in teamwork, fun, complex projects ...",
+      title: "Data Scientist",
+      company: "Netflix",
+      salary: "\$100–130k/yearly",
+      status: "Applied",
+      location: "Los Angeles, CA",
+      description:
+          "Analyze data to improve user experience and recommendations.",
+      date: "12 April, 2022",
+      deadline: "12 July, 2022",
+      type: "Full-time",
+      responsibilities: [
+        "Analyze user behavior data",
+        "Build machine learning models",
+        "Prepare data visualizations",
+      ],
       category: "Android",
     ),
     Job(
-      title: "Junior UX Designer",
-      company: "Kotlin, Java",
-      salary: "\$40–60k/yearly",
-      status: "Expiring",
-      location: "Remote",
-      description: "We’re looking for a like-minded motion designer ...",
+      title: "DevOps Engineer",
+      company: "Spotify",
+      salary: "\$85–110k/yearly",
+      status: "Open",
+      location: "Stockholm, Sweden",
+      description: "Maintain CI/CD pipelines and cloud infrastructure.",
+      date: "25 May, 2022",
+      deadline: "25 August, 2022",
+      type: "Full-time",
+      responsibilities: [
+        "Automate deployments with CI/CD",
+        "Monitor system performance",
+        "Work with AWS and Docker",
+      ],
+      category: "Android",
+    ),
+    Job(
+      title: "QA Tester",
+      company: "Ubisoft",
+      salary: "\$50–70k/yearly",
+      status: "Expires Soon",
+      location: "Paris, France",
+      description: "Test and improve the quality of AAA games.",
+      date: "30 May, 2022",
+      deadline: "30 June, 2022",
+      type: "Contract",
+      responsibilities: [
+        "Execute test cases on game builds",
+        "Report and track bugs",
+        "Collaborate with developers for fixes",
+      ],
       category: "Android",
     ),
   ];
@@ -67,7 +150,6 @@ class JobsListScreen extends StatelessWidget {
     for (var job in jobs) {
       groupedJobs.putIfAbsent(job.category, () => []).add(job);
     }
-
     return Scaffold(
       backgroundColor: const Color(0xFFBFDBD1),
       body: Column(
@@ -147,11 +229,3 @@ class JobsListScreen extends StatelessWidget {
     );
   }
 }
-
-// echo "# test_app" >> README.md
-// git init
-// git add README.md
-// git commit -m "first commit"
-// git branch -M main
-// git remote add origin https://github.com/230103252Itachi/test_app
-// Change

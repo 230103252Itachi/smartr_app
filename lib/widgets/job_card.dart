@@ -14,7 +14,7 @@ class JobCard extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 12),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: ListTile(
-        contentPadding: EdgeInsets.all(16),
+        contentPadding: EdgeInsets.all(12),
         leading: ClipRRect(
           borderRadius: BorderRadius.circular(8),
           child: Image.asset(
@@ -60,7 +60,7 @@ class JobCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             JobStatusChip(status: job.status),
-            SizedBox(height: 5),
+            SizedBox(height: 14),
             Text(
               job.salary,
               style: TextStyle(fontSize: 12, color: Color(0xFF434545)),

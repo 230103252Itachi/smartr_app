@@ -6,6 +6,10 @@ class Job {
   final String location;
   final String description;
   final String category;
+  final String date;
+  final String deadline;
+  final String type;
+  final List<String> responsibilities;
 
   Job({
     required this.title,
@@ -15,5 +19,9 @@ class Job {
     required this.location,
     required this.description,
     required this.category,
+    required this.date,
+    required this.deadline,
+    required this.type,
+    required this.responsibilities,
   });
 }

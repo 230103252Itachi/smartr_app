@@ -7,24 +7,33 @@ class JobStatusChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Color color;
+    Color c;
+    IconData? icon;
     switch (status) {
       case "Applied":
-        color = Colors.green;
+        color = Color(0xFFFFFFFF);
+        c = Color(0xFF07864B);
+        icon = Icons.done;
         break;
-      case "Expiring":
-        color = Colors.orange;
+      case "Expires Soon":
+        color = Color(0xFFFFFFFF);
+        c = Color(0xFFDAA400);
+        icon = Icons.info;
         break;
       default:
-        color = Colors.grey;
+        return const SizedBox.shrink();
     }
-
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-      decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
-        borderRadius: BorderRadius.circular(12),
+      decoration: BoxDecoration(color: c.withOpacity(1)),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(icon, size: 14, color: Color(0xFFFFFFFF)),
+          const SizedBox(width: 4),
+          Text(status, style: TextStyle(color: color, fontSize: 10)),
+        ],
       ),
-      child: Text(status, style: TextStyle(color: color, fontSize: 12)),
     );
   }
 }
