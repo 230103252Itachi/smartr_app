@@ -1,0 +1,1 @@
+const String NEWS_API_KEY = 'f779089532f3439780db42e77b52ac06';
